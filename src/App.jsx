@@ -88,7 +88,6 @@ export default function App() {
                 className="relative w-[900px] h-[250px] bg-no-repeat bg-cover font-serif"
                 style={{ backgroundImage: 'url("/cheque-template.png")' }}
               >
-                {/* Download Button */}
                 <button
                   onClick={() => downloadCheque(cheque.id)}
                   className="absolute top-2 right-2 text-xs bg-blue-600 text-white px-2 py-1 rounded"
@@ -96,7 +95,6 @@ export default function App() {
                   Download
                 </button>
 
-                {/* Positioned Fields */}
                 <div className="absolute top-[20px] left-[30px] text-sm font-semibold">
                   Cheque #: {cheque.id.slice(0, 8)}
                 </div>
@@ -116,14 +114,12 @@ export default function App() {
                   Expiry: {cheque.expiry_date}
                 </div>
 
-                {/* Status Badge */}
                 <div
                   className={`absolute top-[170px] right-[30px] text-xs px-2 py-1 rounded-full font-bold ${statusClass}`}
                 >
                   {status}
                 </div>
 
-                {/* QR Code */}
                 <div className="absolute bottom-4 left-4">
                   <QRCodeCanvas
                     value={`https://echeque-admin-ui.vercel.app/cheque/${cheque.id}`}
@@ -134,7 +130,6 @@ export default function App() {
                   />
                 </div>
 
-                {/* Signature Line */}
                 <div className="absolute bottom-4 right-6 text-xs italic text-gray-500">
                   Signature ____________________
                 </div>
