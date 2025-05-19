@@ -1,6 +1,4 @@
-import { QRCode } from 'react-qrcode-logo'; // or 'qrcode.react' if you're using that
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import IssueChequeForm from "./IssueChequeForm";
 import { QRCodeCanvas } from "qrcode.react";
 import html2canvas from "html2canvas";
@@ -124,13 +122,13 @@ export default function App() {
 
                 <div className="absolute bottom-4 left-4">
                   <QRCodeCanvas
-                   value={JSON.stringify(chequeData)}
-                   size={120}
-                   bgColor="#ffffff"
-                   fgColor="#000000"
-                   level="H"
-                 />  // 👈 MAYBE you have an extra ">" or bad copy-paste
-                 </div>
+                    value={JSON.stringify(cheque)}
+                    size={120}
+                    bgColor="#ffffff"
+                    fgColor="#000000"
+                    level="H"
+                  />
+                </div>
 
                 <div className="absolute bottom-4 right-6 text-xs italic text-gray-500">
                   Signature ____________________
