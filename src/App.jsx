@@ -1,3 +1,4 @@
+import { QRCode } from 'react-qrcode-logo'; // or 'qrcode.react' if you're using that
 import React from "react";
 import { useEffect, useState } from "react";
 import IssueChequeForm from "./IssueChequeForm";
@@ -122,13 +123,14 @@ export default function App() {
                 </div>
 
                 <div className="absolute bottom-4 left-4">
-                  <QRCodeCanvas value={`https://echeque-admin-ui.vercel.app`} />
-                    size={60}
-                    bgColor="#ffffff"
-                    fgColor="#000000"
-                    level="H"
-                  />
-                </div>
+                  <QRCodeCanvas
+                   value={JSON.stringify(chequeData)}
+                   size={120}
+                   bgColor="#ffffff"
+                   fgColor="#000000"
+                   level="H"
+                 />  // 👈 MAYBE you have an extra ">" or bad copy-paste
+                 </div>
 
                 <div className="absolute bottom-4 right-6 text-xs italic text-gray-500">
                   Signature ____________________
