@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import IssueChequeForm from "./IssueChequeForm";
 import { QRCodeCanvas } from "qrcode.react";
@@ -121,8 +122,7 @@ export default function App() {
                 </div>
 
                 <div className="absolute bottom-4 left-4">
-                  <QRCodeCanvas
-                    value={`https://echeque-admin-ui.vercel.app/cheque/${cheque.id}`}
+                  <QRCodeCanvas value={`https://echeque-admin-ui.vercel.app`} />
                     size={60}
                     bgColor="#ffffff"
                     fgColor="#000000"
